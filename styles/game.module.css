@@ -1,8 +1,6 @@
-.countryName {
+.body {
+  background-color: rgba(19, 39, 39, 10%);
   text-align: center;
-  font-size: 40px;
-  font-family: sans-serif;
-  margin-bottom: 10px;
 }
 
 .gameHeader {
@@ -10,6 +8,13 @@
   padding-bottom: 15px;
   background-color: rgb(19, 39, 39);
   color: white;
+}
+
+.countryName {
+  text-align: center;
+  font-size: 40px;
+  font-family: sans-serif;
+  margin-bottom: 10px;
 }
 
 .stats {
@@ -23,12 +28,6 @@
   text-align: center;
   font-size: 25px;
   font-family: sans-serif;
-}
-
-.gameBody {
-  padding: 15px;
-  background-color: rgba(19, 39, 39, 10%);
-  text-align: center;
 }
 
 .card {
@@ -48,7 +47,7 @@
   background-color: rgba(255, 255, 255, 50%);
   margin: 15px;
   font-size: 25px;
-  border: 0px;
+  border: 10px;
   border-radius: 5px;
   padding: 10px;
 }
