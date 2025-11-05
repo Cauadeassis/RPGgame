@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../styles/game.module.css";
-import { game } from "../models/gameModel";
+import { useGameEngine } from "../hooks/useGameEngine";
 
 export default function Game() {
   const initialStats = {
@@ -9,9 +9,17 @@ export default function Game() {
     army: { value: 50, maxValue: 100 },
     economy: { value: 50, maxValue: 100 },
   };
-  const { stats, currentCard, displayedText, isTyping, handleButtonClick } =
-    game(initialStats);
+
+  const {
+    stats,
+    currentCard,
+    displayedText,
+    isTyping,
+    handleButtonClick,
+  } = useGameEngine(initialStats);
+
   const statKeys = Object.keys(stats);
+
   return (
     <div className={styles.body}>
       <header className={styles.gameHeader}>
@@ -25,6 +33,7 @@ export default function Game() {
           ))}
         </div>
       </header>
+
       {currentCard && (
         <>
           <div className={styles.card}>
